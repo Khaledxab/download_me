@@ -10,7 +10,7 @@ function App() {
         <div className="download-section">
           <a
             className="download-button"
-            href="/path/to/your/app.apk"
+            href="/apk/a.apk"
             download
           >
             Download Now
