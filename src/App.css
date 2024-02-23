@@ -1,38 +1,83 @@
-.App {
+/* App Container */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0; /* Background color */
+}
+
+/* App Header */
+.app-header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* App Title */
+.app-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #333;
+  animation: slideInDown 1s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App Description */
+.app-description {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #666;
+  animation: fadeInUp 1s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Download Section */
+.download-section {
+  margin-top: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+/* Download Button */
+.download-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: #033b77;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  animation: pulse 1.5s infinite alternate;
 }
 
-@keyframes App-logo-spin {
+.download-button:hover {
+  background-color: #d88200;
+}
+
+/* Keyframe animations */
+@keyframes slideInDown {
   from {
-    transform: rotate(0deg);
+    transform: translateY(-100%);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
   }
 }
